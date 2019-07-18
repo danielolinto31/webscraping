@@ -1,0 +1,1 @@
+Realizar raspagem de imóveis em: https://www.vivareal.com.br/venda/rio-grande-do-norte/natal/apartamento_residencial/
