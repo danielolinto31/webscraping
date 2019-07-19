@@ -1,10 +1,6 @@
 Atividade 02 (Daniel Olinto)
 ===
 
-## Sumário
-
-[TOC]
-
 ## Antes de começar
 
 Na atividade-01 eu não tinha conseguido fazer com que o link de paginação funcionasse. Consequentemente o arquivo .CSV continham apenas 36 anúncios.
@@ -16,7 +12,7 @@ Nessa atividade-02, eu consegui implementar tal funcionalidade. Portanto, optei 
 Foi realizada a atividade utilizando o .CSV que criei na atividade-01.
 
 1. Realizado o webscraping do site Viva Real filtrando por "Natal - RN" e "Apartamento";
-    1.1. https://www.vivareal.com.br/venda/rio-grande-do-norte/natal/apartamento_residencial/?__vt=rpca:a 
+    * https://www.vivareal.com.br/venda/rio-grande-do-norte/natal/apartamento_residencial/?__vt=rpca:a 
 2. Utilizado o JSOUP;
 3. Os arquivos .JAVA, .KTR, .MD seguem em anexo;
 4. Utilizei o ";" como delimitador dos campos.
@@ -25,9 +21,9 @@ Foi realizada a atividade utilizando o .CSV que criei na atividade-01.
 
 1. Foi gerado com .CSV com 8377 anúncios;
 2. Realizei alguns filtros no .JAVA, seguem:
-    2.1. Mesmo filtrando apenas por "Natal - RN" e "Apartamento", o site trazia anúncios de outras cidades e estados. Portanto filtrei no código para trazer apenas com "Natal - RN" de fato;
-    2.2. Tinham diversos casos que não havia o logradouro no site, trazendo apenas bairro e cidade no campo de endereço. Portanto, criei essa condição no código para facilitar o trabalho no Pentaho;
-    2.3. Houve um único caso que estava cadastrado "Rua;" que estava causando crash no Pentaho. Portanto, criei a condição para eliminar o ";".
+    * Mesmo filtrando apenas por "Natal - RN" e "Apartamento", o site trazia anúncios de outras cidades e estados. Portanto filtrei no código para trazer apenas com "Natal - RN" de fato;
+    * Tinham diversos casos que não havia o logradouro no site, trazendo apenas bairro e cidade no campo de endereço. Portanto, criei essa condição no código para facilitar o trabalho no Pentaho;
+    * Houve um único caso que estava cadastrado "Rua;" que estava causando crash no Pentaho. Portanto, criei a condição para eliminar o ";".
 
 ---
 
@@ -78,19 +74,19 @@ if(endereco.endsWith("Natal - RN")) {
 
 1. CSV file input;
 2. Replace in string;
-    2.1. Tratado os dados em endereço;
+    * Tratado os dados em endereço;
 3. Split fields;
-    3.1. Dividido o endereço em logradouro, bairro e cidade;
+    * Dividido o endereço em logradouro, bairro e cidade;
 4. Replace in string;
-    4.1. Tratado os dados em preço, taxa e acomodações (banheiro, quarto, etc.);
+    * Tratado os dados em preço, taxa e acomodações (banheiro, quarto, etc.);
 5. Value mapper
-    5.1. Criado o campo zona;
+    * Criado o campo zona;
 6. Split field
-    6.1. Tratado os dados em área.
+    * Tratado os dados em área.
 7. Select values
-    7.1. Convertido os campos para tipo number;
+    * Convertido os campos para tipo number;
 8. Calculator
-    8.1. Feito o cálculo APO;
+    * Feito o cálculo APO;
 9. Calculator
-    9.1. Feito o cálculo preço/área;
+    * Feito o cálculo preço/área;
 10. Text file output;
