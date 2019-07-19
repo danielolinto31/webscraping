@@ -41,7 +41,7 @@ public class Scraping {
 			writer.append(";");
 			writer.append("Suítes");
 			writer.append(";");
-			writer.append("Estacionamento");
+			writer.append("Vagas");
 			writer.append(";");
 			writer.append("Preço");
 			writer.append("\n");
@@ -81,7 +81,7 @@ public class Scraping {
 				if(i % 35 == 0 && i != 0){
 					writer.flush();
 					
-					System.out.println("Página atual: " + paginaAtual);
+					System.out.println("Concluída a paginação: " + paginaAtual);
 					
 					if(proximaPagina.hasAttr("data-disabled")) {
 						break;
