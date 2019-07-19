@@ -68,7 +68,6 @@ if(endereco.endsWith("Natal - RN")) {
     writer.append("\n");
 }
 ```
-> Condições utilizadas para facilitar o trabalho no Pentaho [name=Daniel Olinto]
 
 ## Utilizando o Pentaho
 
@@ -89,4 +88,4 @@ if(endereco.endsWith("Natal - RN")) {
     * Feito o cálculo APO;
 9. Calculator
     * Feito o cálculo preço/área;
-10. Text file output;
+10. Text file output.
